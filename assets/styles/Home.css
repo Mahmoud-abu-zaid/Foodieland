@@ -62,7 +62,7 @@ li {
     display: none;
   }
 }
-.show {
+.dropdown-content.show {
   display: block;
   position: absolute;
   right: 5px;
