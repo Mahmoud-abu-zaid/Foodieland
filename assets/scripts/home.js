@@ -1,3 +1,4 @@
-function toggleMenu() {
-  document.getElementById("dropdown-content").classList.toggle("show");
-}
+document.querySelector('.menu-button').addEventListener('click', function() {
+  const dropdown = document.getElementById("dropdown-content");
+  dropdown.classList.toggle("show");
+});
