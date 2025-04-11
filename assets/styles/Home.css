@@ -4,14 +4,29 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+:root {
+  --main-color: #e7fafe;
+  --icons-color: #e4e6f1;
+  --white: white;
+  --black: black;
+  --border-color: #ccc;
+  --hover-nav: #e4e4e4;
+  --bg-icon: #e4e6f1;
+  --text-main-color: #5c6466;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
-  color: white;
+  background-color: var(--white);
+  color: var(--white);
   padding: 40px 25px;
-  border: 1px solid #ccc;
+  border-bottom: 1px solid var(--border-color);
 }
 a {
   text-decoration: none;
@@ -36,7 +51,7 @@ li {
   font-size: 20px;
 }
 .menu-button {
-  background-color: white;
+  background-color: var(--white);
   border: none;
   margin-right: 11px;
 }
@@ -49,7 +64,7 @@ li {
     padding: 5px;
   }
   ul li:hover {
-    background-color: #e4e4e4;
+    background-color: var(--hover-nav);
     border-radius: 5px;
   }
   .dropdown-content,
@@ -66,9 +81,136 @@ li {
   display: block;
   position: absolute;
   right: 5px;
-  background-color: white;
-  border: 1px solid #ccc;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
   gap: 10px;
   padding: 10px;
+}
+.hero .hero-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 30px;
+}
+.hero .content {
+  display: flex;
+  align-items: center;
+  background-color: var(--main-color);
+  border-radius: 30px 0px 0px 30px;
+  padding: 30px;
+  box-shadow: 10px 0 15px -5px var(--main-color);
+  object-fit: cover;
+  -webkit-mask-image: linear-gradient(to right, black 95%, transparent 100%);
+  mask-image: linear-gradient(to right, black 95%, transparent 100%);
+}
+.hero .hero-content .icon-Hero {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background-color: var(--white);
+  border-radius: 20px;
+  width: fit-content;
+  padding: 7px 15px;
+}
+.hero .hero-content .two-icons .icon-Hero {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background-color: var(--bg-icon);
+  border-radius: 20px;
+  width: fit-content;
+  padding: 7px 15px;
+}
+.hero .hero-content .two-icons .icon-Hero span {
+  color: var(--text-main-color);
+}
+.hero .hero-content h2 {
+  font-size: 65px;
+  padding-top: 32px;
+}
+.hero .hero-content p {
+  font-size: 16px;
+  padding: 24px 0px;
+  color: var(--text-main-color);
+}
+.hero .hero-content {
+  padding: 50px;
+}
+.hero-content .two-icons {
+  display: flex;
+  gap: 15px;
+}
+.clinet {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero .hero-content .clinet h4 {
+  font-size: 16px;
+  padding: 5px;
+  padding-left: 10px;
+}
+.hero .hero-content .clinet p {
+  font-size: 16px;
+  padding: 5px;
+
+  padding-left: 10px;
+  color: var(--text-main-color);
+}
+.hero .hero-content .clinet .view-recipes {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 20px;
+  border-radius: 20px;
+  width: 200px;
+  height: 60px;
+  font-size: 14px;
+  margin: 20px;
+}
+
+.hero .hero-content .hero-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 30px 30px 0px;
+  object-fit: cover;
+  -webkit-mask-image: linear-gradient(to left, black 75%, transparent 100%);
+  mask-image: linear-gradient(to left, black 75%, transparent 100%);
+}
+.badge {
+  position: absolute;
+  top: 180px;
+  right: 42%;
+}
+@media (max-width: 1100px) {
+  .hero .hero-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .hero .content {
+    border-radius: 30px 30px 0px 0px;
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+    transition: mask-image 1s ease, -webkit-mask-image 1s ease;
+  }
+  .hero .hero-content .hero-image img {
+    border-radius: 0px 0px 30px 30px;
+    -webkit-mask-image: linear-gradient(to top, black 80%, transparent 90%);
+    mask-image: linear-gradient(to top, black 80%, transparent 100%);
+    transition: mask-image 1s ease, -webkit-mask-image 1s ease;
+  }
+  .clinet {
+    padding-top: 50px;
+  }
+  .badge {
+    display: none;
+  }
+}
+@media (max-width: 523px) {
+  .hero .hero-content .clinet,
+  .hero .hero-content .clinet .chefjohn {
+    padding-bottom: 40px;
+  }
 }
