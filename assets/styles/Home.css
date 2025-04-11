@@ -43,6 +43,7 @@ li {
 @media (max-width: 768px) {
   .menu-button {
     display: block;
+    cursor: pointer;
   }
   ul li {
     padding: 5px;
