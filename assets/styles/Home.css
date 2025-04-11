@@ -13,6 +13,7 @@
   --hover-nav: #e4e4e4;
   --bg-icon: #e4e6f1;
   --text-main-color: #5c6466;
+  --Categories-color: #f2f4ee;
 }
 .flex {
   display: flex;
@@ -213,4 +214,51 @@ li {
   .hero .hero-content .clinet .chefjohn {
     padding-bottom: 40px;
   }
+  .hero .hero-content {
+    padding: 10px;
+  }
+  .hero .hero-content h2 {
+    font-size: 45px;
+  }
+}
+.categorys-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.head-categorys {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+.head-categorys h2 {
+  font-size: 48px;
+}
+.head-categorys .view-all-categories {
+  background-color: var(--main-color);
+  padding: 20px;
+  border-radius: 20px;
+}
+.categorys {
+  background-color: var(--Categories-color);
+  text-align: center;
+  padding: 20px;
+
+  border-radius: 20px;
+}
+.categorys img {
+  height: 100px;
+  width: 100px;
+  padding-bottom: 15px;
+  transition: 0.08s;
+}
+.categorys img:hover {
+  height: 120px;
+  width: 120px;
 }
