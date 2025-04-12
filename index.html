@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/styles/Home.css" />
+    <link rel="icon" href="./assets/img/pngtree-orange-dotted-circle-png-image_11466206.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -35,7 +36,7 @@
             </button>
             <ul class="dropdown-content" id="dropdown-content">
               <li><a href="index.html">Home</a></li>
-              <li><a href="recipes.html">Recipes</a></li>
+              <li><a href="#" id="chicked-video">Recipes</a></li>
               <li><a href="blog.html">Blog</a></li>
               <li><a href="contact.html">Contact</a></li>
               <li><a href="about-us.html">About us</a></li>
@@ -89,7 +90,7 @@
                   </div>
                 </div>
                 <div>
-                  <a href="/recipes.html" class="view-recipes">
+                  <a href="/recipes.html" id="" class="view-recipes">
                     <span>View Recipes</span>
                     <i class="fa-solid fa-circle-play"></i>
                   </a>
@@ -105,7 +106,7 @@
           <img src="/assets/img/Badge.png" alt="" />
         </div>
       </section>
-      <section class="Categories ">
+      <section class="Categories">
         <div>
           <div class="head-categorys">
             <h2>Categories</h2>
@@ -151,11 +152,22 @@
           </div>
         </div>
       </section>
-      <section>
-
+      <section class="recipes">
+        <div class="head-recipes">
+          <h2>Simple and tasty recipes</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut <br />
+            labore et dolore magna aliqut enim ad minim
+          </p>
+        </div>
+        <div id="recipes" class="content-video" >
+          <div id="video-links-container"></div>
+          <div id="Link-video" class="link-video"></div>
+        </div>
       </section>
     </main>
     <footer></footer>
     <script type="module" src="/assets/scripts/Home.js"></script>
+    <script type="module" src="/assets/scripts/Recipes.js"></script>
   </body>
 </html>
