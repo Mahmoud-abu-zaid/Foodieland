@@ -127,10 +127,10 @@ const videos = {
 };
 function video() {
   const contentContainer = document.getElementById("Link-video");
-
   Object.values(videos).forEach((video) => {
     const div = document.createElement("div");
     div.classList.add("video-item");
+
     div.innerHTML = `
        <div class="content">
         <div class="img-link-video">
@@ -150,8 +150,7 @@ function video() {
           </div>
         </div>
       </div>
-      `
-    ;
+      `;
     document.getElementById("chicked-video").addEventListener("click", function (e) {
       e.preventDefault();
       const chickedVideo = sessionStorage.getItem("video");

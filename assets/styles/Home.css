@@ -451,7 +451,7 @@ li {
 .privatechef .content img {
   width: 100%;
 }
-.posts-instagram{
+.posts-instagram {
   padding-bottom: 60px;
   background-color: var(--main-color);
 }
@@ -485,10 +485,102 @@ li {
   color: var(--white);
   background-color: var(--black);
 }
-.posts-instagram a span{
-  padding-right:7px ;
+.posts-instagram a span {
+  padding-right: 7px;
   display: block;
 }
-.icon-instagram{
- font-size: 20px;
+.icon-instagram {
+  font-size: 20px;
+}
+.subscribe {
+  width: 100%;
+  padding: 60px 0px;
+}
+.subscribe .content {
+  background-color: var(--main-color);
+  width: 80%;
+  border-radius: 30px;
+}
+.subscribe .content .info h2 {
+  font-size: 48px;
+  padding-top: 30px;
+}
+.subscribe .content .info p {
+  color: var(--text-main-color);
+  padding: 20px;
+}
+.subscribe .content .info h2,
+.subscribe .content .info p {
+  margin: auto;
+  text-align: center;
+}
+.subscribe .content .Registering {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+}
+.subscribe .content .Registering img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: -3px;
+  border-radius: 30px;
+}
+.subscribe .content .Registering .input-email {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  background-color: var(--white);
+  padding: 17px;
+  width: 120%;
+  border-radius: 20px;
+}
+.subscribe .content .Registering .input-email input {
+  padding: 10px;
+  outline: none;
+  border: none;
+  width: 150%;
+}
+.subscribe .content .Registering .input-email button {
+  background-color: var(--black);
+  padding: 15px;
+  color: var(--white);
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 810px) {
+  .subscribe .content .Registering img {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 700px) {
+  .subscribe .content .Registering img {
+    width: 110px;
+    height: 110px;
+  }
+  .subscribe .content .Registering .input-email {
+    width: 100%;
+  }
+  .subscribe .content .info h2 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 650px) {
+  .subscribe .content .Registering img {
+    display: none;
+  }
+  .subscribe .content .Registering .input-email {
+    margin: 50px 0px;
+  }
+}
+@media (max-width: 450px) {
+  .subscribe .content {
+    padding: 10px;
+  }
+  .subscribe .content .Registering .input-email button {
+    padding: 10px;
+  }
 }
