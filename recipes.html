@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="/assets/styles/Home.css" />
     <link rel="stylesheet" href="/assets/styles/Recipes.css" />
 
+    <link rel="icon" href="./assets/img/pngtree-orange-dotted-circle-png-image_11466206.png" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -43,7 +45,6 @@
               <li><a href="about-us.html">About us</a></li>
             </ul>
           </div>
-
           <ul class="icons">
             <li>
               <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -59,17 +60,177 @@
       </div>
     </header>
     <main>
-    <div class="video-details">
-    <h1 id="detail-title"></h1>
-    <video id="video-player" controls width="100%"></video>
-    
-    <div class="nutrition-grid" id="nutrition-info"></div>
-    
-    <a href="index.html" id="back-btn">العودة للقائمة</a>
-  </div>
+      <section class="flex">
+        <div class="video-details">
+          <div class="title-video-and-details">
+            <div>
+              <h1 id="detail-title" class="title-video"></h1>
+              <div id="details-head" class="details-head"></div>
+            </div>
+          </div>
+          <div class="video-and-info">
+            <div>
+              <video id="video-player" class="video" controls></video>
+            </div>
+            <div class="nutrition-grid" id="nutrition-info"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex info-lorem">
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </section>
+
+      <section class="flex ingredients">
+        <div class="content">
+          <div>
+            <h2>Ingredients</h2>
+            <div>
+              <h3>For main dish</h3>
+              <label class="custom-radio" onclick="radioClick(this)">
+                <input type="radio" name="" class="radio-option" />
+                <span class="radio-mark">Lorem ipsum dolor sit amet</span>
+              </label>
+              <label class="custom-radio" onclick="radioClick(this)">
+                <input type="radio" name="" class="radio-option" />
+                <span class="radio-mark">Lorem ipsum dolor sit amet</span>
+              </label>
+              <label onclick="radioClick(this)">
+                <input type="radio" name="" class="radio-option" />
+                <span>Lorem ipsum dolor sit amet</span>
+              </label>
+              <label onclick="radioClick(this)">
+                <input type="radio" name="" class="radio-option" />
+                <span>Lorem ipsum dolor sit amet</span>
+              </label>
+            </div>
+
+            <div>
+              <h3>For the sauce</h3>
+              <label onclick="radioClick(this)">
+                <input type="radio" name="" class="radio-option" />
+                <span>Lorem ipsum dolor sit amet</span>
+              </label>
+              <label onclick="radioClick(this)">
+                <input type="radio" name="" class="radio-option" />
+                <span>Lorem ipsum dolor sit amet</span>
+              </label>
+              <label onclick="radioClick(this)">
+                <input type="radio" name="" class="radio-option" />
+                <span>Lorem ipsum dolor sit amet</span>
+              </label>
+              <label onclick="radioClick(this)">
+                <input type="radio" name="" class="radio-option" />
+                <span>Lorem ipsum dolor sit amet</span>
+              </label>
+            </div>
+
+            <div>
+              <h3>Directions</h3>
+              <label onclick="radioClick(this)">
+                <input type="radio" name="" class="radio-option" />
+                <span> 1. Lorem ipsum dolor sit amet</span>
+                <p>
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni <br />
+                  dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor <br />
+                  sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore <br />
+                  magnam aliquam quaerat voluptatem.
+                </p>
+                <img src="./assets/img/Rectangle 23.png" alt="" />
+                <p>
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni <br />
+                  dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor <br />
+                  sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore <br />
+                  magnam aliquam quaerat voluptatem.
+                </p>
+              </label>
+              <label onclick="radioClick(this)">
+                <input type="radio" name="" class="radio-option" />
+                <span>2. Lorem ipsum dolor sit amet</span>
+                <p>
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni <br />
+                  dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor <br />
+                  sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore <br />
+                  magnam aliquam quaerat voluptatem.
+                </p>
+              </label>
+              <label onclick="radioClick(this)">
+                <input type="radio" name="" class="radio-option" />
+                <span> 3. Lorem ipsum dolor sit amet</span>
+                <p>
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni <br />
+                  dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor <br />
+                  sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore <br />
+                  magnam aliquam quaerat voluptatem.
+                </p>
+              </label>
+            </div>
+          </div>
+
+          <div class="ather-video flex">
+            <div class="links-video">
+              <div>
+                <h3>Other Recipe</h3>
+                <div id="other-recipe" class="other-recipe"></div>
+              </div>
+              <div class="img-Announcement">
+                <img src="/assets/img/Ads.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="subscribe flex">
+        <div class="content">
+          <div class="info">
+            <h2>Deliciousness to your inbox</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor <br />
+              incididunt ut labore et dolore magna aliqut enim ad minim
+            </p>
+            <div class="Registering">
+              <div>
+                <img src="/assets/img/kisspng-salad-salad-fresh-food-healthylife-vegetables-vegetarian-5d42e3a7cb8543 1.png" alt="" />
+              </div>
+              <div>
+                <div class="input-email">
+                  <input type="email" placeholder="Your email address..." />
+                  <button>Subscribe</button>
+                </div>
+              </div>
+              <div>
+                <img src="/assets/img/Photo-plate.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
-    <script src="./assets/scripts/Recipes.js"></script>
-    <script src="./assets/scripts/Home.js"></script>
+
+    <footer>
+      <div>
+        <nav>
+          <div>
+            <img class="img-nav" src="/assets/img/Foodieland..png" alt="" />
+            <p>Lorem ipsum dolor sit amet, consectetuipisicing elit,</p>
+          </div>
+          <ul>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about-us.html">About us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <script src="./assets/scripts/recipes.js"></script>
+    <script src="./assets/scripts/home.js"></script>
   </body>
 </html>

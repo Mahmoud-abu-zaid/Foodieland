@@ -584,3 +584,14 @@ li {
     padding: 10px;
   }
 }
+footer nav p{
+  padding-top: 10px;
+  color: var(--text-main-color);
+}
+footer nav {
+  flex-wrap: wrap;
+}
+footer nav ul{
+  flex-wrap: wrap;
+  padding: 20px;
+}

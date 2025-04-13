@@ -130,7 +130,6 @@ function video() {
   Object.values(videos).forEach((video) => {
     const div = document.createElement("div");
     div.classList.add("video-item");
-
     div.innerHTML = `
        <div class="content">
         <div class="img-link-video">
@@ -167,15 +166,6 @@ function video() {
       e.preventDefault();
       sessionStorage.setItem("selectedVideo", JSON.stringify(video));
       window.location.href = link.href;
-    });
-    document.getElementById("chicked-video").addEventListener("click", function (e) {
-      e.preventDefault();
-      const chickedVideo = sessionStorage.getItem("video");
-      if (!chickedVideo) {
-        document.getElementById("recipes").scrollIntoView({
-          behavior: "smooth",
-        });
-      }
     });
     contentContainer.appendChild(div);
   });
