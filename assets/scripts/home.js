@@ -35,8 +35,8 @@ const videos = {
   },
   strawberry: {
     id: "strawberry",
-    src: "/assets/videos/VID_20250411_191359.mp4",
-    img: "/assets/img/image 26-4.png",
+    src: "/assets/videos/AI Burger Commercial.mp4",
+    img: "/assets/img/image 30 (1).png",
     title: "Strawberry Oatmeal Pancake with Honey Syrup",
     Type: "Breakfast",
     prepTime: "16 Seconds",
@@ -66,7 +66,7 @@ const videos = {
   meatballs: {
     id: "meatballs",
     src: "/assets/videos/My Video1.mp4",
-    img: "/assets/img/image 26-3.png",
+    img: "/assets/img/image 30 (2).png",
     title: "Chicken Meatballs with Cream Cheese",
     Type: "Meat",
     prepTime: "4 Seconds",
@@ -97,7 +97,7 @@ const videos = {
   chickenandRice: {
     id: "chickenandRice",
     src: "/assets/videos/My Video7.mp4",
-    img: "/assets/img/image 26-2.png",
+    img: "/assets/img/image 30 (3).png",
     title: "The Best Easy One Pot Chicken and Rice",
     Type: "Snack",
     prepTime: "7 Seconds",
@@ -150,6 +150,16 @@ function video() {
         </div>
       </div>
       `;
+
+    const link = div.querySelector("a");
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      sessionStorage.setItem("selectedVideo", JSON.stringify(video));
+      window.location.href = link.href;
+    });
+    contentContainer.appendChild(div);
+
+    
     document.getElementById("chicked-video").addEventListener("click", function (e) {
       e.preventDefault();
       const chickedVideo = sessionStorage.getItem("video");
@@ -161,13 +171,14 @@ function video() {
         window.location.href = "video.html?id=" + JSON.parse(chickedVideo).id;
       }
     });
-    const link = div.querySelector("a");
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      sessionStorage.setItem("selectedVideo", JSON.stringify(video));
-      window.location.href = link.href;
-    });
-    contentContainer.appendChild(div);
   });
 }
+
 window.addEventListener("DOMContentLoaded", video);
+
+function scrollToRecipes() {
+  const viewRecipes = document.getElementById("recipes");
+  if (viewRecipes) {
+    viewRecipes.scrollIntoView({ behavior: "smooth" });
+  }
+}
