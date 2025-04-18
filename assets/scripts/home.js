@@ -127,9 +127,12 @@ const videos = {
 };
 function video() {
   const contentContainer = document.getElementById("Link-video");
+
   Object.values(videos).forEach((video) => {
     const div = document.createElement("div");
+
     div.classList.add("video-item");
+
     div.innerHTML = `
        <div class="content">
         <div class="img-link-video">
@@ -152,17 +155,22 @@ function video() {
       `;
 
     const link = div.querySelector("a");
+
     link.addEventListener("click", (e) => {
       e.preventDefault();
+
       sessionStorage.setItem("selectedVideo", JSON.stringify(video));
+
       window.location.href = link.href;
     });
+
     contentContainer.appendChild(div);
 
-    
     document.getElementById("chicked-video").addEventListener("click", function (e) {
       e.preventDefault();
+
       const chickedVideo = sessionStorage.getItem("video");
+
       if (!chickedVideo) {
         document.getElementById("recipes").scrollIntoView({
           behavior: "smooth",

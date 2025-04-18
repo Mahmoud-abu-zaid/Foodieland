@@ -1,0 +1,39 @@
+
+
+.active-label {
+  color: var(--text-main-color);
+  background-color: var(--main-color);
+}
+
+.ingredients .content {
+  display: flex;
+  justify-content: center;
+}
+.ingredients .content h2 {
+  font-size: 36px;
+}
+.ingredients .content h3 {
+  font-size: 24px;
+  padding: 15px 0px;
+}
+.ingredients .content label {
+  display: block;
+  padding: 20px;
+  margin: 8px 0px;
+  border-bottom: var(--border-color) 2px solid;
+  width: 100%;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.ingredients .content label img {
+  width: 96%;
+  display: block;
+  margin: auto;
+}
+.ingredients .content label span {
+  padding: 15px;
+  font-size: 18px;
+}
+.ingredients .content label p {
+  padding: 15px;
+}
