@@ -2,9 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/styles/Home.css" />
     <link rel="stylesheet" href="/assets/styles/Blog.css" />
+    <link rel="stylesheet" href="/assets/styles/Recipes.css" />
 
     <link
       rel="stylesheet"
@@ -13,6 +15,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -59,13 +62,83 @@
       </div>
     </header>
     <main>
-      <h1>Blog</h1>
-      <div id="artices" class="articles-container">
-
-      </div>
+      <section class="flex">
+        <div class="title-section">
+          <h2>Blog & Article</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+          <div class="label-div">
+            <label>
+              <input type="text" placeholder="Search article, news or recipe..." />
+              <button>Search</button>
+            </label>
+          </div>
+        </div>
+      </section>
+      <section class="article-blag flex">
+        <div class="content-article">
+          <div class="info-article">
+            <div id="artices" class="articles-container"></div>
+          </div>
+          <div>
+            <div class="ather-video flex">
+              <div class="links-video">
+                <div>
+                  <h2>Tasty Recipes</h2>
+                  <div id="other-recipe" class="other-recipe"></div>
+                </div>
+                <div class="img-Announcement">
+                  <img src="/assets/img/Ads.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="subscribe flex">
+        <div class="content">
+          <div class="info">
+            <h2>Deliciousness to your inbox</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor <br />
+              incididunt ut labore et dolore magna aliqut enim ad minim
+            </p>
+            <div class="Registering">
+              <div>
+                <img src="/assets/img/kisspng-salad-salad-fresh-food-healthylife-vegetables-vegetarian-5d42e3a7cb8543 1.png" alt="" />
+              </div>
+              <div>
+                <div class="input-email">
+                  <input type="email" placeholder="Your email address..." />
+                  <button>Subscribe</button>
+                </div>
+              </div>
+              <div>
+                <img src="/assets/img/Photo-plate.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
-    <script src="./assets/scripts/blo.js"></script>
+
+    <footer>
+      <div>
+        <nav>
+          <div>
+            <img class="img-nav" src="/assets/img/Foodieland..png" alt="" />
+            <p>Lorem ipsum dolor sit amet, consectetuipisicing elit,</p>
+          </div>
+          <ul>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about-us.html">About us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <script src="./assets/scripts/blog.js"></script>
+    <script src="./assets/scripts/recipes.js"></script>
     <script src="./assets/scripts/home.js"></script>
   </body>
 </html>

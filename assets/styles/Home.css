@@ -20,7 +20,7 @@
   justify-content: center;
   align-items: center;
 }
-nav {
+header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -584,14 +584,19 @@ li {
     padding: 10px;
   }
 }
-footer nav p{
+footer nav p {
   padding-top: 10px;
   color: var(--text-main-color);
 }
 footer nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
+  border: none;
+  padding: 40px 10px;
 }
-footer nav ul{
+footer nav ul {
   flex-wrap: wrap;
   padding: 20px;
 }
