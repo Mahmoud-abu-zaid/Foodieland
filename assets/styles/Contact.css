@@ -1,10 +1,10 @@
-h2 {
+.register h2 {
   font-size: 64px;
   padding: 30px 0px;
   margin: auto;
   text-align: center;
 }
-.content {
+.register .content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@ h2 {
   width: 100%;
 }
 
-.background-chef {
+.register .background-chef {
   background-color: var(--main-color);
   padding: 20px;
   padding-bottom: 0px;
@@ -22,35 +22,35 @@ h2 {
   mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
   transition: mask-image 1s ease, -webkit-mask-image 1s ease;
 }
-form {
+.register form {
   padding: 20px;
   width: 100%;
 }
-form label {
+.register form label {
   padding: 7px;
   width: 100%;
 }
-form label p {
+.register form label p {
   color: var(--text-main-color);
   padding: 5px;
 }
-form label select {
+.register form label select {
   width: 100%;
 }
-form label textarea {
+.register form label textarea {
   height: 200px;
   width: 100%;
 }
-form label input,
-form label textarea,
-form label select {
+.register form label input,
+.register form label textarea,
+.register form label select {
   padding: 10px;
   border-radius: 7px;
   outline: none;
   border: 1px solid var(--text-main-color);
   width: 100%;
 }
-button {
+.register button {
   background-color: var(--black);
   color: var(--white);
   width: 180px;
@@ -63,30 +63,30 @@ button {
 }
 
 @media (max-width: 768px) {
-  h2 {
+  .register h2 {
     font-size: 48px;
   }
-  .info-register {
+  .register .info-register {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  form label input,
-  form label textarea,
-  form label select {
+  .register form label input,
+  .register form label textarea,
+  .register form label select {
     width: 100%;
   }
-  .background-chef {
+  .register .background-chef {
     width: 65%;
     margin: 3px;
     padding: 10px;
     max-height: 550px;
   }
-  .background-chef img {
+  .register .background-chef img {
     width: 100%;
   }
-  button {
+  .register button {
     background-color: var(--black);
     color: var(--white);
     width: 130px;
