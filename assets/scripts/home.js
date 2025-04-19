@@ -184,9 +184,4 @@ function video() {
 
 window.addEventListener("DOMContentLoaded", video);
 
-function scrollToRecipes() {
-  const viewRecipes = document.getElementById("recipes");
-  if (viewRecipes) {
-    viewRecipes.scrollIntoView({ behavior: "smooth" });
-  }
-}
+
