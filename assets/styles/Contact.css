@@ -1,0 +1,95 @@
+h2 {
+  font-size: 64px;
+  padding: 30px 0px;
+  margin: auto;
+  text-align: center;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.background-chef {
+  background-color: var(--main-color);
+  padding: 20px;
+  padding-bottom: 0px;
+  border-radius: 30px;
+  margin: 20px;
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  transition: mask-image 1s ease, -webkit-mask-image 1s ease;
+}
+form {
+  padding: 20px;
+}
+form label {
+  padding: 7px;
+  width: 100%;
+}
+form label p {
+  color: var(--text-main-color);
+  padding: 5px;
+}
+form label select {
+  width: 100%;
+}
+form label textarea {
+  width: 100%;
+  height: 200px;
+}
+form label input,
+form label textarea,
+form label select {
+  padding: 10px;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid var(--text-main-color);
+}
+button {
+  background-color: var(--black);
+  color: var(--white);
+  width: 180px;
+  height: 64px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 48px;
+  }
+  .info-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  form label input,
+  form label textarea,
+  form label select {
+    width: 100%;
+  }
+  .background-chef {
+    width: 65%;
+    margin: 3px;
+    padding: 10px;
+    max-height: 550px;
+  }
+  .background-chef img {
+    width: 100%;
+  }
+  button {
+    background-color: var(--black);
+    color: var(--white);
+    width: 130px;
+    height: 40px;
+    border-radius:15px ;
+
+  }
+}
