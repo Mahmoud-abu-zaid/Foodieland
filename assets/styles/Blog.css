@@ -58,6 +58,11 @@
 }
 .artice-items .img-article img {
   border-radius: 20px;
+  width: 260px;
+  transition: 0.3s;
+}
+.artice-items .img-article img:hover{
+  width: 270px;
 }
 .artice-items h2 {
   font-size: 24px;
@@ -77,6 +82,7 @@
 }
 .artice-items .info-clint img {
   margin-right: 10px;
+
 }
 .info-article {
   padding-top: 15px;

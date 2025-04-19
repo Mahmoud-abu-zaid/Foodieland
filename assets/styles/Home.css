@@ -39,6 +39,7 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 25px;
+  z-index: 20;
 }
 li {
   font-size: 16px;

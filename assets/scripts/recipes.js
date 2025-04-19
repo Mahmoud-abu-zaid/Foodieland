@@ -1,13 +1,10 @@
 function loadVideoDetails() {
-
   let selected = sessionStorage.getItem("selectedVideo");
 
   if (!selected) {
-
     selected = JSON.stringify(videos.burger);
     sessionStorage.setItem("selectedVideo", selected);
   }
-
 
   const savedVideo = sessionStorage.getItem("selectedVideo");
 
@@ -15,6 +12,7 @@ function loadVideoDetails() {
     const video = JSON.parse(savedVideo);
 
     document.getElementById("detail-title").textContent = video.title;
+
     document.getElementById("details-head").innerHTML = `
         <div class="head">
           <div class="head-data">
@@ -71,6 +69,7 @@ function loadVideoDetails() {
     document.title = `${video.title}`;
 
     const videoPlayer = document.getElementById("video-player");
+
     videoPlayer.innerHTML = `
       <source src="${video.src}" type="video/mp4">
     `;
@@ -116,7 +115,9 @@ function atherVideo() {
 
   selectedVideos.forEach((videoItem) => {
     const recipeAtherVideo = document.createElement("div");
+
     recipeAtherVideo.classList.add("videoAther");
+
     recipeAtherVideo.innerHTML = `
     <div class="info">
     <div class="">
@@ -132,18 +133,23 @@ function atherVideo() {
 
     `;
     const link = recipeAtherVideo.querySelector("a");
+
     link.addEventListener("click", (e) => {
       e.preventDefault();
+
       sessionStorage.setItem("selectedVideo", JSON.stringify(videoItem));
+
       window.location.href = link.href;
     });
+
     vidioAther.appendChild(recipeAtherVideo);
   });
 }
-window.addEventListener("DOMContentLoaded", atherVideo);
 
+window.addEventListener("DOMContentLoaded", atherVideo);
 
 function radioClick(hoverRadio) {
   const labels = document.querySelectorAll("label");
+
   labels.forEach((labels) => hoverRadio.classList.add("active-label"));
 }

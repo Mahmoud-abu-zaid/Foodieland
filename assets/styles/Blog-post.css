@@ -1,8 +1,35 @@
+.content-post {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.content-post h2 {
+  font-size: 64px;
+  padding: 40px 0px 25px 0px;
+}
+.content-post .clint-name {
+  padding: 0px 15px;
+  margin-right: 20px;
+}
 
-
-.active-label {
+.content-post .date-post {
   color: var(--text-main-color);
-  background-color: var(--main-color);
+  padding-left: 20px;
+  padding: 10px;
+  border-left: 1px solid var(--text-main-color);
+}
+.content-post p {
+  padding: 45px 0px;
+}
+.img-artcale {
+  width: 100%;
+}
+.img-artcale img {
+  display: block;
+  margin: auto;
+  width: 85%;
+  max-height: 600px;
+  border-radius: 20px;
 }
 
 .ingredients .content {
@@ -20,10 +47,7 @@
   display: block;
   padding: 20px;
   margin: 8px 0px;
-  border-bottom: var(--border-color) 2px solid;
   width: 100%;
-  border-radius: 15px;
-  cursor: pointer;
 }
 .ingredients .content label img {
   width: 96%;
@@ -31,9 +55,55 @@
   margin: auto;
 }
 .ingredients .content label span {
-  padding: 15px;
-  font-size: 18px;
+  display: block;
+  padding: 40px 0px 15px 0px;
+  font-size: 24px;
+  font-weight: bold;
 }
 .ingredients .content label p {
+  padding: 25px 0px;
+  color: var(--text-main-color);
+}
+.ingredients .content .lorem {
+  display: block;
+  font-size: 36px;
+  padding: 40px 25px;
+  background-color: var(--main-color);
+  font-style: italic;
+  font-weight: 500;
+}
+.ingredients .info-ingredients {
+  display: grid;
+  grid-template-columns: 2fr 150px;
+}
+.ingredients .info-ingredients .share {
+  padding-top: 60px;
+}
+.ingredients .info-ingredients .icons-sociale-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ingredients .info-ingredients .icons-sociale-media a {
+  display: block;
+  margin: auto;
   padding: 15px;
+}
+@media (max-width: 992px) {
+  .ingredients .info-ingredients {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .ingredients .info-ingredients .icons-sociale-media {
+    flex-direction: row;
+  }
+  .ingredients .info-ingredients .share {
+    padding-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .content-post h2 {
+    font-size: 48px;
+  }
 }
