@@ -1,0 +1,30 @@
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding: 40px 20px;
+}
+.about-text{
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+.about-text div {
+  padding: 20px;
+}
+.about-text h2 {
+  color: var(--black);
+  margin-bottom: 15px;
+}
+.about-text p {
+  line-height: 40px;
+}
+.about-text ul {
+  list-style: inside;
+  display: block;
+  gap: 0;
+}
+.about-text ul li {
+  padding: 10px 0px;
+}
