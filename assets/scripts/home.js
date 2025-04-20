@@ -165,23 +165,7 @@ function video() {
     });
 
     contentContainer.appendChild(div);
-
-    document.getElementById("chicked-video").addEventListener("click", function (e) {
-      e.preventDefault();
-
-      const chickedVideo = sessionStorage.getItem("video");
-
-      if (!chickedVideo) {
-        document.getElementById("recipes").scrollIntoView({
-          behavior: "smooth",
-        });
-      } else {
-        window.location.href = "video.html?id=" + JSON.parse(chickedVideo).id;
-      }
-    });
   });
 }
 
 window.addEventListener("DOMContentLoaded", video);
-
-

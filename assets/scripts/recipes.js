@@ -3,6 +3,7 @@ function loadVideoDetails() {
 
   if (!selected) {
     selected = JSON.stringify(videos.burger);
+
     sessionStorage.setItem("selectedVideo", selected);
   }
 
@@ -110,7 +111,9 @@ function atherVideo() {
   const vidioAther = document.getElementById("other-recipe");
 
   const videosArray = Object.values(videos);
+
   videosArray.sort(() => Math.random() - 0.5);
+
   const selectedVideos = videosArray.slice(0, 3);
 
   selectedVideos.forEach((videoItem) => {
