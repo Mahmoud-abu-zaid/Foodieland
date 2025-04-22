@@ -1,13 +1,13 @@
 function loadVideoDetails() {
-  let selected = sessionStorage.getItem("selectedVideo");
+  let selected = localStorage.getItem("selectedVideo");
 
   if (!selected) {
     selected = JSON.stringify(videos.burger);
 
-    sessionStorage.setItem("selectedVideo", selected);
+    localStorage.setItem("selectedVideo", selected);
   }
 
-  const savedVideo = sessionStorage.getItem("selectedVideo");
+  const savedVideo = localStorage.getItem("selectedVideo");
 
   if (savedVideo) {
     const video = JSON.parse(savedVideo);
@@ -140,7 +140,7 @@ function atherVideo() {
     link.addEventListener("click", (e) => {
       e.preventDefault();
 
-      sessionStorage.setItem("selectedVideo", JSON.stringify(videoItem));
+      localStorage.setItem("selectedVideo", JSON.stringify(videoItem));
 
       window.location.href = link.href;
     });

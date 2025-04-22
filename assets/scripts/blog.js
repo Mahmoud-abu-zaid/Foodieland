@@ -93,7 +93,7 @@ function blogAndArtices() {
     link.addEventListener("click", (e) => {
       e.preventDefault();
 
-      let defaultValueSessionStorage = sessionStorage.getItem("selectedPost");
+      let defaultValueSessionStorage = localStorage.getItem("selectedPost");
 
       if (!defaultValueSessionStorage) {
         const defaultPost = {
@@ -106,9 +106,9 @@ function blogAndArtices() {
           date: "12 November 2021",
         };
 
-        sessionStorage.setItem("selectedPost", JSON.stringify(defaultPost));
+        localStorage.setItem("selectedPost", JSON.stringify(defaultPost));
       } else {
-        sessionStorage.setItem("selectedPost", JSON.stringify(article));
+        localStorage.setItem("selectedPost", JSON.stringify(article));
       }
 
       window.location.href = link.href;

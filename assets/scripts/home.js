@@ -136,9 +136,14 @@ function video() {
     div.innerHTML = `
        <div class="content">
         <div class="img-link-video">
-          <a href="recipes.html?id=${video.id}" class="video-thumbnail">
+        <div class="video-thumbnail">
+          <a href="recipes.html?id=${video.id}" >
             <img src="${video.img}" alt="${video.title}" />
-          </a>
+            </a>
+            <div class="icon-heart">
+            <i onclick="toggleHeart(this)" class="fa-solid fa-heart heart"></i>
+            </div>
+            </div>
           <h3>${video.title}</h3>
           <div class="type-time">
             <div>
@@ -159,7 +164,7 @@ function video() {
     link.addEventListener("click", (e) => {
       e.preventDefault();
 
-      sessionStorage.setItem("selectedVideo", JSON.stringify(video));
+      localStorage.setItem("selectedVideo", JSON.stringify(video));
 
       window.location.href = link.href;
     });
@@ -169,3 +174,9 @@ function video() {
 }
 
 window.addEventListener("DOMContentLoaded", video);
+
+
+function toggleHeart(heart) {
+  heart?.classList.toggle("hover-heart");
+  
+}

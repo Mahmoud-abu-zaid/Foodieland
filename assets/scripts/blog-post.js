@@ -1,6 +1,6 @@
 
 function loadPostDetils() {
-  const postBlog = sessionStorage.getItem("selectedPost");
+  const postBlog = localStorage.getItem("selectedPost");
   if (postBlog) {
     const post = JSON.parse(postBlog);
     document.title = `${post.title}`;
