@@ -60,60 +60,57 @@ const articles = {
     date: "12 November 2021",
   },
 };
-function blogAndArtices() {
+
+function blogAndArtices(data = Object.values(articles)) {
   const contentContainer = document.getElementById("artices");
+  contentContainer.innerHTML = ""; // مسح المحتوى الحالي قبل العرض
 
-  Object.values(articles).forEach((article) => {
+  if (data.length === 0) {
+    contentContainer.innerHTML = "<p class='not-found-search'>Search not found.</p>";
+    return;
+  }
+
+  data.forEach((article) => {
     const content = document.createElement("div");
-
     content.classList.add("artice-items");
 
     content.innerHTML = `
-        <div class="img-article">
+      <div class="img-article">
         <a href="blog-post.html?id=${article.id}">
-        <img src="${article.imgArtcale}" alt="${article.title}">
+          <img src="${article.imgArtcale}" alt="${article.title}">
         </a>
-        </div>
-        <div class="info"> 
+      </div>
+      <div class="info"> 
         <h2>${article.title}</h2>
         <p>${article.description}</p>
-
         <div class="info-clint">
-        <div class="clint">
-        <img src="${article.clintImg}" alt=${article.clint}>
-        <span>${article.clint}</span><span class="date-article">${article.date}</span>
+          <div class="clint">
+            <img src="${article.clintImg}" alt=${article.clint}>
+            <span>${article.clint}</span>
+            <span class="date-article">${article.date}</span>
+          </div>
         </div>
-
-        </div>
-        </div> 
+      </div> 
     `;
 
     const link = content.querySelector("a");
-
     link.addEventListener("click", (e) => {
       e.preventDefault();
-
-      let defaultValueSessionStorage = localStorage.getItem("selectedPost");
-
-      if (!defaultValueSessionStorage) {
-        const defaultPost = {
-          id: "dianneRussell",
-          imgArtcale: "/assets/img/image 26-2.png",
-          title: "Full Guide to Becoming a Professional Chef",
-          description: "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do <br/> eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
-          clint: "Dianne Russell",
-          clintImg: "/assets/img/Ellipse 2-2.png",
-          date: "12 November 2021",
-        };
-
-        localStorage.setItem("selectedPost", JSON.stringify(defaultPost));
-      } else {
-        localStorage.setItem("selectedPost", JSON.stringify(article));
-      }
-
+      localStorage.setItem("selectedPost", JSON.stringify(article));
       window.location.href = link.href;
     });
+
     contentContainer.appendChild(content);
   });
 }
-window.addEventListener("DOMContentLoaded", blogAndArtices);
+
+window.addEventListener("DOMContentLoaded", () => blogAndArtices());
+
+function handleSearch() {
+  const searchInput = document.getElementById("searchInput");
+  const filter = searchInput.value.toLowerCase();
+
+  const filtered = Object.values(articles).filter((item) => item.title.toLowerCase().includes(filter) || item.clint.toLowerCase().includes(filter));
+
+  blogAndArtices(filtered);
+}

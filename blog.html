@@ -68,12 +68,17 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
           <div class="label-div">
             <label>
-              <input type="text" placeholder="Search article, news or recipe..." />
-              <button>Search</button>
+              <input type="text" id="searchInput" placeholder="Search article, news or recipe..." />
+              <button onclick="handleSearch()">Search</button>
             </label>
+            <ul id="itemList"></ul>
           </div>
         </div>
       </section>
+      <div class="showorhide">
+        <span>Search by title or publisher</span>
+      </div>
+      <div id="not-found" class="not-found-search"></div>
       <section class="article-blag flex">
         <div class="content-article">
           <div class="info-article">
