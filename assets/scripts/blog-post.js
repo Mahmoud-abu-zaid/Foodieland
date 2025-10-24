@@ -1,4 +1,3 @@
-
 function loadPostDetils() {
   const postBlog = localStorage.getItem("selectedPost");
   if (postBlog) {
@@ -16,7 +15,7 @@ function loadPostDetils() {
     </div>
     <p>${post.description}</p>
     </div>
-   
+
     </div>
      <div class="img-artcale">
      <img src="${post.imgArtcale}" alt=${post.title}>

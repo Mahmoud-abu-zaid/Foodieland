@@ -63,7 +63,7 @@ const articles = {
 
 function blogAndArtices(data = Object.values(articles)) {
   const contentContainer = document.getElementById("artices");
-  contentContainer.innerHTML = ""; // مسح المحتوى الحالي قبل العرض
+  contentContainer.innerHTML = ""; 
 
   if (data.length === 0) {
     contentContainer.innerHTML = "<p class='not-found-search'>Search not found.</p>";

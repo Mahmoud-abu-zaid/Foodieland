@@ -18,6 +18,7 @@ const videos = {
     Carbohydrates: "40g",
     cholesterol: "80mg",
   },
+
   fish: {
     id: "fish",
     src: "/assets/videos/Mures Tasmania_ Wholesale Fresh Fish advertisement 2012.mp4",
@@ -33,6 +34,7 @@ const videos = {
     Carbohydrates: "40g",
     cholesterol: "80mg",
   },
+
   strawberry: {
     id: "strawberry",
     src: "/assets/videos/AI Burger Commercial.mp4",
@@ -48,6 +50,7 @@ const videos = {
     Carbohydrates: "40g",
     cholesterol: "80mg",
   },
+
   salad: {
     id: "salad",
     src: "/assets/videos/How to Make a Garden Salad.mp4",
@@ -63,6 +66,7 @@ const videos = {
     Carbohydrates: "40g",
     cholesterol: "80mg",
   },
+
   meatballs: {
     id: "meatballs",
     src: "/assets/videos/My Video1.mp4",
@@ -94,6 +98,7 @@ const videos = {
     Carbohydrates: "40g",
     cholesterol: "80mg",
   },
+
   chickenandRice: {
     id: "chickenandRice",
     src: "/assets/videos/My Video7.mp4",
@@ -109,6 +114,7 @@ const videos = {
     Carbohydrates: "40g",
     cholesterol: "80mg",
   },
+
   pasta: {
     id: "pasta",
     src: "/assets/videos/My Video4.mp4",
@@ -141,7 +147,6 @@ function video() {
             <img src="${video.img}" alt="${video.title}" />
             </a>
             <div class="icon-heart">
-            <i onclick="toggleHeart(this)" class="fa-solid fa-heart heart"></i>
             </div>
             </div>
           <h3>${video.title}</h3>
@@ -176,7 +181,3 @@ function video() {
 window.addEventListener("DOMContentLoaded", video);
 
 
-function toggleHeart(heart) {
-  heart?.classList.toggle("hover-heart");
-  
-}

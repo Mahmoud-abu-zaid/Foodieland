@@ -154,5 +154,5 @@ window.addEventListener("DOMContentLoaded", atherVideo);
 function radioClick(hoverRadio) {
   const labels = document.querySelectorAll("label");
 
-  labels.forEach((labels) => hoverRadio.classList.add("active-label"));
+  labels.forEach(() => hoverRadio.classList.add("active-label"));
 }
